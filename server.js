@@ -11,7 +11,7 @@ import orderRouter from "./routes/orderRoute.js"
 
 //  add config
 const app = express()
-const port = 4000
+const PORT = process.env.PORT || 8080;
 
 // middleware
 app.use(express.json())
@@ -32,8 +32,6 @@ app.get("/", (req, res) => {
     res.send("API Working")
 })
 
-app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
 })
-
-// mongodb+srv://Tonylex18:An41285600@cluster0.8bohf.mongodb.net/?
